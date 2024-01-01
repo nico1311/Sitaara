@@ -1,38 +1,26 @@
+/* src/App.css */
+
+body, #root, .App {
+  margin-top: 55px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: #beaede;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  color: black;
+  background-color: #beaede;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content-container {
+  padding: 20px; /* Adjust padding as needed */
+  width: 100%;
+  max-width: 1200px; /* Set a max width for better readability */
 }

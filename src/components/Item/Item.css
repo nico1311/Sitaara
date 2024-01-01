@@ -1,0 +1,63 @@
+/* src/components/Item/Item.css */
+
+.CardItem {
+  background-color:#faecff;
+  border-radius: 10px;
+  width: 15rem;
+  padding: 1rem;
+  margin: 1rem;
+
+  }
+  
+/* src/components/Item/Item.css */
+
+.Header {
+  text-align: center;
+  flex-grow: 1; /* Allow the title to take up available space */
+}
+
+.ItemHeader {
+  flex-shrink: 0; /* Prevent the title from shrinking */
+  margin: 5px 0; /* Remove any default margins that may affect the layout */
+  white-space: nowrap; /* Prevent the title from wrapping */
+  max-height: 2em; /* Set a fixed height for the title */
+ overflow:hidden;
+ text-overflow:ellipsis;
+
+}
+
+  
+  .ItemImg {
+    width: 100%;
+    height: 100%;
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: cover;
+  }
+  
+  .Info {
+    font-size: 16px;
+  }
+  
+  .Option {
+    background-color: #9370db;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   text-decoration: none;
+  }
+  
+  .Option:hover {
+    background-color: #7548a6;
+  }
+
+  .fav {
+    background-color: transparent;
+    border:none;
+    color:#431996;
+    font-size: 25px;
+    display: block;
+  }
+  

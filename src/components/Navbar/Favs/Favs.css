@@ -1,0 +1,44 @@
+
+.favoritos{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FavList{
+    display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  background-color: #faecff;
+  border-radius: 5px;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  padding: 10px;
+
+}
+
+.favitem{
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.favitem img{
+    padding: 10 px;
+}
+.favitem p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Agregar{
+    background-color: #9370db;;
+    border:none;
+    padding: 5px;
+    color:white;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.Agregar:hover{
+    color:#431996;
+}

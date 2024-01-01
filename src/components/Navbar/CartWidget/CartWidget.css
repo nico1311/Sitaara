@@ -1,0 +1,40 @@
+/* src/components/CartWidget/CartWidget.css */
+
+div {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #a217de; /* Purple color */
+}
+
+/* Styling for the cart icon */
+
+.Cart {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: rgb(255, 255, 255) /* Make sure to set a relative position for the parent */
+}
+
+.Cart.active{
+  color:#a217de
+}
+
+.Cart:hover{
+  color:#a217de;
+}
+
+.ItemCount {
+  background-color: rgb(220, 180, 237); /* Choose your desired background color */
+  color: rgb(255, 255, 255); /* Choose your desired text color */
+  border-radius: 80%; /* Optional: Makes it look like a circle */
+  padding: 2px 6px; /* Adjust padding as needed */
+  font-weight: 600;
+}
+
+/* Ensure that the CartWidget link inherits text decoration */
+.CartWidget {
+  text-decoration: none;
+  color: #000000; /* Choose your desired text color */
+}
+

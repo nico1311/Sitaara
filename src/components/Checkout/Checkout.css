@@ -1,0 +1,111 @@
+.FormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#faecff;
+    padding: 20px;
+    margin-top: 10%;
+    border-radius: 5%;
+  }
+  
+  .FormTitle {
+    margin-bottom: 20px;
+  }
+  
+  .Form {
+    width: 100%;
+  }
+  
+  .FormGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .Label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .FormButton{
+    background-color: #7548a6;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   text-decoration: none;
+    margin-top: 20px;
+  }
+
+  .FormButton:hover{
+    background-color:#522780;
+  }
+
+  .OrderDetails{
+    background-color: #faecff;
+    display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5%;
+  }
+
+  .OrderItems{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .total{
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+    font-size:22px;
+}
+
+.ErrorMessage{
+    color:red
+}
+  @media (max-width: 400px){
+
+    .FormContainer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the start (left) */
+      margin-top: 300px;
+      height:80%
+    }
+
+    .OrderDetails {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start (left) */
+        margin-top: 300px;
+        height:80%
+      }
+      .Generacion{
+        margin-top:200px;
+        height: 80%;
+      }
+  }
+
+
+
+
+
+@media (max-width: 768px) {
+    /* Adjust the styles for smaller screens */
+    .FormContainer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the start (left) */
+      margin-top: 200px;
+      height:80%
+    }
+    .OrderDetails{
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start (left) */
+        margin-top: 200px;
+        height:80%
+      }
+      .Generacion{
+        margin-top: 200px;
+        height: 80%;
+      }
+}

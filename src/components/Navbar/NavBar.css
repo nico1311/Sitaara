@@ -1,0 +1,98 @@
+/* NavBar.css */
+
+nav {
+  text-align: center;
+  padding: 15px;
+  background-color: #cf88e7;
+  color: #131313;
+  width: 100%;
+  position: fixed; /* Stick the navbar to the top */
+  top: 0; /* Ensure it stays at the top */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center;
+}
+
+.nav-container {
+  width: auto; /* Allow it to take as much width as needed */
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 80px;
+  width: auto;
+}
+
+.category {
+  margin-left: 10px;
+  border: none;
+  color: #ffffff;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.category:hover {
+  color: #78109a;
+}
+
+.category.active {
+  color: #78109a;
+}
+
+.Cart {
+  margin-left: auto;
+}
+
+.Cart.active{
+  color:#a217de
+}
+.CartWidget {
+  position: fixed;
+  right: 10%;
+  top: 58px;
+  transform: translateY(-50%);
+  display: flex;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.Favs.active{
+  color:#78109a;
+
+}
+.Favs{
+  color:white;
+  display: flex;
+  padding: 10px;
+}
+
+.search{
+  border-radius: 5px;
+  background-color:#e0adf1;
+  border:none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+  /* Adjust the styles for smaller screens */
+  .nav-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+    margin-left: 20px;
+  }
+
+  .CartWidget {
+    position: relative; /* Reset position for smaller screens */
+    top: 0;
+    right: 0;
+    transform: none;
+    margin-top: 10px; /* Add margin to create space between the cart and other items */
+  }
+}

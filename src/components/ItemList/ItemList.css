@@ -1,0 +1,9 @@
+/* src/components/ItemList/ItemList.css */
+
+.ListGroup {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to go down to the next line */
+    justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+ 
