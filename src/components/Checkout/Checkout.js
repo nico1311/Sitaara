@@ -53,44 +53,40 @@ const Checkout = () => {
     }
   };
 
-  if (loading) {
-    return <h1 className="Generacion">Se está generando la orden</h1>;
-  }
-
-  if (orderId) {
-    const createPreference = async () => {
+  useEffect(() => {
+    const createPreferenceId = async () => {
       try {
         console.log("Creating preference...");
         const response = await axios.post("http://localhost:3000/create_preference", {
           title: orderId, // Remove the unnecessary object wrappers
           price: total,   // Remove the unnecessary object wrappers
         });
-    
+
         console.log("Response Data:", response.data);
-    
+
         const { id } = response.data;
         console.log("Preference ID:", id);
-    
-        return id;
+
+        setPreferenceId(id);
       } catch (error) {
         console.error("Error creating preference:", error);
         throw error; // Rethrow the error to propagate it to the caller
       }
-    };
-    const handleBuy = async () => {
-      try {
-        const id = await createPreference();
-        if (id) {
-          setPreferenceId(id);
-        }
-      } catch (error) {
-        // Handle the error, if any
-        console.error("Error in handleBuy:", error);
-      }
     }
+
+    if (orderId) {
+      createPreferenceId();
+    }
+  }, [orderId]);
+
+  if (loading) {
+    return <h1 className="Generacion">Se está generando la orden</h1>;
+  }
+
+  if (orderId) {
     return (
       <div className="OrderDetails">
-        <h1>El id de su orden es:<br/>{orderId}</h1>
+        <h1>El id de su orden es:<br />{orderId}</h1>
         <h2>Detalles del Pedido:</h2>
         {orderDetails && (
           <div className="OrderItems">
@@ -98,14 +94,12 @@ const Checkout = () => {
               <CartItem key={item.id} {...item} />
             ))}
             <h3 className="total">Total: ${orderDetails.total}</h3>
-      <a href="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"> <Wallet onClick={handleBuy} /> </a>
-      
-        </div>
+            {preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />}
+          </div>
         )}
       </div>
     );
   }
-  
 
   return (
     <div>
